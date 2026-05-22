@@ -1,0 +1,406 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f5f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #0c2131;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #d4af37;
+    font-style: italic;
+}
+
+/* Navigation */
+nav {
+    background-color: #1a3a4a;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em;
+    text-transform: capitalize;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 400px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h1, section h2 {
+    color: #0c2131;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+}
+
+/* Buttons */
+.button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button, .btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.submit-btn {
+    background-color: #0c2131;
+    color: white;
+}
+
+.clear-btn {
+    background-color: #ccc;
+    color: black;
+    margin-right: 10px;
+}
+
+button:hover, .btn:hover {
+    opacity: 0.9;
+}
+
+/* Forms */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0c2131;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Cart Styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* Cart rendering (app.js) */
+.cart-product-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-bottle-wrap {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.cart-bottle-img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cart-bottle-label {
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    background: rgba(12, 33, 49, 0.85);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 3px 6px;
+    border-radius: 999px;
+    max-width: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+} 
+
+
+.cart-product-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cart-qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-qty-btn {
+    min-width: 34px;
+    padding: 6px 10px;
+}
+
+.cart-qty-value {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-remove-btn {
+    background-color: #ccc;
+    color: #000;
+}
+
+.cart-remove-btn:hover {
+    opacity: 0.9;
+}
+
+
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: #0c2131;
+    color: white;
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.cart-summary {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin-left: auto;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 0 0 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Perfume Image (Bottle) */
+.perfume-img {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+
+    /* Provided universal bottle image */
+    background-image: url("https://thumbs.dreamstime.com/b/crystal-clear-perfume-bottle-pink-cap-white-background-modern-fragrance-design-mockup-elegant-transparent-half-full-331843416.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Bottle name label */
+.perfume-img::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: rgba(255,255,255,0.95);
+    background: rgba(12, 33, 49, 0.75);
+    padding: 6px 10px;
+    border-radius: 999px;
+    text-shadow: none;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+/* Remove old placeholder emoji overlay */
+.perfume-img::before {
+    content: "";
+}
+
+/* Bottle colour accents (overlay tint) */
+.img-oud   { --bottle-accent: rgba(212,175,55,0.55); }
+.img-rose  { --bottle-accent: rgba(255,105,180,0.55); }
+.img-musk  { --bottle-accent: rgba(147,112,219,0.55); }
+.img-citrus{ --bottle-accent: rgba(255,215,0,0.55); }
+.img-amber { --bottle-accent: rgba(218,165,32,0.55); }
+.img-ocean { --bottle-accent: rgba(0,191,255,0.55); }
+
+/* Apply accent tint behind label */
+.perfume-img {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 999px rgba(0,0,0,0);
+}
+
+.perfume-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 20%, var(--bottle-accent, rgba(212,175,55,0.4)), transparent 55%);
+    z-index: 1;
+}
+
+.product-card h3 {
+    color: #0c2131;
+    margin: 10px 0;
+    padding: 0 15px;
+}
+
+.product-card p {
+    padding: 0 15px;
+}
+
+.product-card .price {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card .btn {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #0c2131;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #d4af37;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
