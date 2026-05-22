@@ -47,12 +47,12 @@
 
     // Price mapping (must match product names used in data-name)
     var prices = {
-      'Royal Oud': 850,
-      'Velvet Rose': 650,
-      'Midnight Musk': 750,
-      'Citrus Bloom': 550,
-      'Golden Amber': 700,
-      'Ocean Breeze': 600
+      'Royal Oud': 200,
+      'Velvet Rose': 250,
+      'Midnight Musk': 300,
+      'Citrus Bloom': 150,
+      'Golden Amber': 275,
+      'Ocean Breeze': 325
     };
 
     // Bottle images (add real assets here)
